@@ -1,612 +1,114 @@
-:root {
-  --bg: #f1e9d8;
-  --bg-alt: #e8dec8;
-  --bg-card: #fbf6e9;
-  --bg-dark: #1a1a1a;
-  --text: #1a1a1a;
-  --text-muted: #595959;
-  --text-light: #8a8a8a;
-  --text-invert: #f1e9d8;
-  --accent: #2d5d3a;
-  --accent-hover: #1f4429;
-  --accent-soft: rgba(45, 93, 58, 0.08);
-  --border: rgba(26, 26, 26, 0.14);
-  --border-strong: rgba(26, 26, 26, 0.25);
-  --max-width: 1180px;
-  --max-content: 780px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potato Eater Productions</title>
+  <meta name="description" content="Independent feature film production. Stories with substance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="/" class="logo">Potato Eater Productions</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/submit.html">Submit</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+  <main>
 
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.65;
-  font-size: 17px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  min-height: 100vh;
-}
+    <section class="hero-home">
+      <div class="container">
+        <span class="eyebrow">Potato Eater Productions</span>
+        <h1>Films that matter.</h1>
+        <p class="tagline">We develop and produce feature films about freedom, justice, integrity, and the work it takes to live well. Stories with something to say.</p>
+        <div class="btn-group">
+          <a href="/submit.html" class="btn">Submit Your Work</a>
+          <a href="/projects.html" class="btn btn-secondary">Our Projects</a>
+        </div>
+      </div>
+    </section>
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  opacity: 0.55;
-  mix-blend-mode: multiply;
-}
+    <div class="container"><div class="divider"><span class="divider-mark"></span></div></div>
 
-body > * { position: relative; z-index: 1; }
+    <section class="section">
+      <div class="content">
+        <div class="manifesto">
+          <span class="eyebrow">Our Purpose</span>
+          <p>Cinema is one of the most powerful tools we have for shaping how people see each other and themselves.</p>
+          <p>We make films because we believe they should be worth making &mdash; honest, well-crafted, and pointed at something true. Not spectacle for its own sake. Not noise.</p>
+        </div>
+      </div>
+    </section>
 
-h1, h2, h3, h4 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 600;
-  line-height: 1.05;
-  letter-spacing: -0.025em;
-  color: var(--text);
-  font-variation-settings: "opsz" 144;
-}
+    <section class="section section-alt">
+      <div class="container">
+        <div class="project-feature">
+          <div class="project-feature-image">
+            <img src="/mick-skylark-logo.png" alt="Mick Skylark: Mini Golf Prodigy">
+          </div>
+          <div class="project-feature-info">
+            <span class="eyebrow">Currently in Post-Production</span>
+            <h2 class="project-title">Mick Skylark: Mini Golf Prodigy</h2>
+            <p class="project-description">A feature comedy about an unlikely prodigy and the world of competitive mini golf.</p>
+            <ul class="project-links">
+              <li><a href="https://www.mickskylark.com" target="_blank" rel="noopener">mickskylark.com</a></li>
+              <li><a href="https://www.imdb.com/title/tt12115818/" target="_blank" rel="noopener">IMDb</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-h1 { font-size: clamp(3rem, 7vw, 5.25rem); }
-h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); letter-spacing: -0.02em; margin-bottom: 1.25rem; }
-h3 { font-size: 1.35rem; margin-bottom: 0.5rem; letter-spacing: -0.015em; }
+    <section class="section section-dark">
+      <div class="content">
+        <div class="cta-block">
+          <span class="eyebrow">Get Involved</span>
+          <h2>Have a script or a reel?</h2>
+          <div class="btn-group">
+            <a href="/scripts.html" class="btn" style="background: var(--bg); color: var(--text); border-color: var(--bg);">Submit a Script</a>
+            <a href="/ai.html" class="btn btn-secondary" style="color: var(--bg); border-color: var(--bg);">AI Filmmaker Inquiries</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-p { margin-bottom: 1rem; }
-p:last-child { margin-bottom: 0; }
+  </main>
 
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-a:hover { color: var(--accent-hover); text-decoration: underline; }
-
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-.content {
-  max-width: var(--max-content);
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-/* ==== HEADER / NAV ==== */
-header {
-  padding: 26px 0;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
-.logo {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.logo:hover { color: var(--accent); text-decoration: none; }
-
-.nav-links {
-  display: flex;
-  gap: 36px;
-  list-style: none;
-}
-
-.nav-links a {
-  color: var(--text);
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 2px;
-}
-.nav-links a:hover {
-  color: var(--accent);
-  text-decoration: none;
-}
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 1px;
-  background: var(--accent);
-  transition: width 0.2s ease;
-}
-.nav-links a:hover::after { width: 100%; }
-
-/* ==== MAIN / SECTIONS ==== */
-main { padding: 0; }
-
-.section {
-  padding: 96px 0;
-}
-.section-tight {
-  padding: 64px 0;
-}
-.section-alt {
-  background: var(--bg-alt);
-}
-.section-dark {
-  background: var(--bg-dark);
-  color: var(--text-invert);
-}
-.section-dark h1, .section-dark h2, .section-dark h3 { color: var(--text-invert); }
-.section-dark a { color: var(--text-invert); }
-.section-dark a:hover { color: var(--text-invert); opacity: 0.8; }
-
-/* ==== EYEBROW ==== */
-.eyebrow {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 20px;
-  display: inline-block;
-}
-.section-dark .eyebrow { color: var(--bg); opacity: 0.6; }
-
-/* ==== HERO (HOMEPAGE) ==== */
-.hero-home {
-  padding: 100px 0 80px;
-  text-align: center;
-}
-
-.hero-home h1 {
-  margin-bottom: 28px;
-  max-width: 14ch;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-home .tagline {
-  color: var(--text-muted);
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 44px;
-  line-height: 1.55;
-}
-
-/* ==== PAGE HEADER (for non-home pages) ==== */
-.page-header {
-  padding: 96px 0 56px;
-  text-align: center;
-}
-
-.page-header h1 {
-  margin-bottom: 24px;
-  font-size: clamp(2.5rem, 5.5vw, 4rem);
-}
-
-.page-header .tagline {
-  color: var(--text-muted);
-  font-size: 1.15rem;
-  max-width: 580px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* ==== DIVIDER ==== */
-.divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 360px;
-}
-.divider::before, .divider::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border-strong);
-}
-.divider-mark {
-  width: 7px;
-  height: 7px;
-  background: var(--accent);
-  transform: rotate(45deg);
-  flex-shrink: 0;
-}
-
-/* ==== BUTTONS ==== */
-.btn {
-  display: inline-block;
-  padding: 15px 32px;
-  background: var(--text);
-  color: var(--bg);
-  border-radius: 2px;
-  font-weight: 500;
-  font-size: 0.92rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  border: 1px solid var(--text);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  text-align: center;
-}
-.btn:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--bg);
-  text-decoration: none;
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--text);
-}
-.btn-secondary:hover {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
-}
-
-.btn-group {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ==== MANIFESTO ==== */
-.manifesto {
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
-}
-.manifesto p {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: clamp(1.4rem, 2.4vw, 1.75rem);
-  line-height: 1.45;
-  color: var(--text);
-  letter-spacing: -0.01em;
-  font-weight: 400;
-}
-.manifesto p + p { margin-top: 1.5rem; }
-
-/* ==== PATH GRID (Submit landing) ==== */
-.path-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  margin: 16px 0 0;
-}
-
-.path-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 44px 38px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.path-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 36px rgba(0,0,0,0.08);
-  border-color: var(--accent);
-}
-.path-card h2 { margin-bottom: 14px; font-size: 1.6rem; }
-.path-card p {
-  color: var(--text-muted);
-  flex-grow: 1;
-  margin-bottom: 28px;
-  font-size: 0.98rem;
-}
-
-/* ==== PROJECTS ==== */
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 520px;
-  margin: 0 auto;
-}
-
-.project-image {
-  width: 220px;
-  margin-bottom: 32px;
-}
-
-.project-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.project-meta {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-muted);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  margin-bottom: 14px;
-  font-weight: 600;
-}
-
-.project-title {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: clamp(1.8rem, 3vw, 2.3rem);
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.project-description {
-  color: var(--text-muted);
-  font-size: 1.02rem;
-  margin-bottom: 28px;
-  max-width: 440px;
-}
-
-.project-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
-  justify-content: center;
-}
-
-.project-links a {
-  font-weight: 500;
-  font-size: 0.92rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-  transition: border-color 0.2s ease;
-}
-.project-links a:hover {
-  border-bottom-color: var(--accent);
-  text-decoration: none;
-}
-
-/* ==== GUIDELINES ==== */
-.guidelines {
-  list-style: none;
-  margin: 24px 0 32px;
-}
-.guidelines li {
-  padding: 16px 0 16px 32px;
-  position: relative;
-  border-bottom: 1px solid var(--border);
-  font-size: 1rem;
-}
-.guidelines li:before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  top: 16px;
-  color: var(--accent);
-  font-weight: 600;
-}
-.guidelines li:last-child { border-bottom: none; }
-.guidelines.exclusions li:before { content: "×"; color: #b04040; }
-
-/* ==== NOTICE BLOCK ==== */
-.notice {
-  background: var(--accent-soft);
-  border-left: 3px solid var(--accent);
-  padding: 22px 26px;
-  margin: 28px 0;
-  border-radius: 0 2px 2px 0;
-  font-size: 0.97rem;
-}
-.notice p { margin-bottom: 8px; }
-.notice p:last-child { margin-bottom: 0; }
-.notice strong { color: var(--text); }
-
-/* ==== EMAIL BOX ==== */
-.email-box {
-  background: var(--bg-dark);
-  color: var(--text-invert);
-  padding: 40px 36px;
-  border-radius: 4px;
-  text-align: center;
-  margin: 36px 0;
-}
-.email-box-label {
-  color: var(--text-invert);
-  opacity: 0.55;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-.email-box .email {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  display: block;
-  word-break: break-all;
-  color: var(--text-invert);
-  letter-spacing: -0.01em;
-}
-.email-box a:hover { color: var(--text-invert); text-decoration: underline; }
-
-/* ==== FORMAT BLOCK ==== */
-.format-block {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 28px 32px;
-  margin: 24px 0;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
-}
-.format-block h4 {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--accent);
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-.format-block ul { list-style: none; margin: 0; }
-.format-block li { padding: 7px 0; color: var(--text); }
-.format-block li strong {
-  display: inline-block;
-  min-width: 120px;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
-/* ==== RELEASE ==== */
-.release {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 44px 48px;
-  margin: 40px 0 0;
-  font-size: 0.93rem;
-  line-height: 1.75;
-}
-.release h2 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.7rem;
-  margin-bottom: 8px;
-}
-.release-subtitle {
-  color: var(--accent);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  margin-bottom: 28px;
-  font-weight: 600;
-}
-.release ol { margin: 18px 0 0 24px; padding: 0; }
-.release ol li { margin-bottom: 16px; padding-left: 8px; }
-.release strong { color: var(--text); }
-
-/* ==== FORM PLACEHOLDER ==== */
-.form-placeholder {
-  background: var(--bg-alt);
-  border: 2px dashed var(--border-strong);
-  border-radius: 4px;
-  padding: 28px;
-  margin: 28px 0;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.92rem;
-  font-style: italic;
-}
-
-/* ==== CTA BLOCK ==== */
-.cta-block {
-  text-align: center;
-}
-.cta-block .eyebrow { margin-bottom: 16px; }
-.cta-block h2 { margin-bottom: 36px; max-width: 16ch; margin-left: auto; margin-right: auto; }
-
-/* ==== FOOTER ==== */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 56px 0 40px;
-  background: var(--bg);
-  margin-top: 32px;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.footer-brand {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--text);
-  margin-bottom: 8px;
-  display: block;
-}
-.footer-brand:hover { color: var(--accent); text-decoration: none; }
-
-.footer-tagline {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  max-width: 320px;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: right;
-}
-.footer-links a {
-  color: var(--text);
-  font-size: 0.88rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.footer-links a:hover { color: var(--accent); }
-
-.footer-bottom {
-  margin-top: 40px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-/* ==== UTILS ==== */
-.text-center { text-align: center; }
-
-/* ==== MOBILE ==== */
-@media (max-width: 720px) {
-  body { font-size: 16px; }
-  .container, .content { padding: 0 22px; }
-  .nav-links { gap: 22px; }
-  .nav-links a { font-size: 0.82rem; }
-  .section { padding: 64px 0; }
-  .section-tight { padding: 44px 0; }
-  .hero-home { padding: 56px 0 44px; }
-  .page-header { padding: 56px 0 36px; }
-  .path-grid { grid-template-columns: 1fr; gap: 18px; }
-  .path-card { padding: 32px 26px; }
-  .release { padding: 28px 24px; }
-  .email-box { padding: 28px 20px; }
-  .project-image { width: 170px; }
-  .footer-inner { flex-direction: column; gap: 28px; }
-  .footer-links { text-align: left; }
-  .footer-bottom { flex-direction: column; }
-}
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <a href="/" class="footer-brand">Potato Eater Productions</a>
+          <p class="footer-tagline">Independent feature film production. Stories with substance.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/submit.html">Submit</a>
+          <a href="/about.html">About</a>
+          <a href="mailto:contact@potatoeaterproductions.com">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Potato Eater Productions LLC</span>
+        <div class="footer-legal">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms &amp; Conditions</a>
+          <a href="/releases.html">Submission Releases</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
