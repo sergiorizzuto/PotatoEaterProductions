@@ -477,7 +477,7 @@ main { padding: 0; }
 .format-block li strong {
   display: inline-block;
   min-width: 120px;
-  color: var(--text-muted);
+  color: var(--accent);
   font-weight: 500;
 }
 
