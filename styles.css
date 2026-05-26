@@ -95,11 +95,11 @@ header {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--accent);
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.logo:hover { color: var(--accent); text-decoration: none; }
+.logo:hover { color: var(--accent-hover); text-decoration: none; }
 
 .nav-links {
   display: flex;
@@ -158,38 +158,49 @@ main { padding: 0; }
 }
 .section-dark .eyebrow { color: var(--bg); opacity: 0.6; }
 
-/* ==== HERO (HOMEPAGE) — horizontal 2-column ==== */
+/* ==== HERO (HOMEPAGE) — horizontal masthead ==== */
 .hero-home {
-  padding: 72px 0 56px;
+  padding: 56px 0 48px;
 }
 
-.hero-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
+.hero-masthead {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
 }
 
-.hero-block h1 {
-  font-size: clamp(2.4rem, 4.4vw, 3.6rem);
-  line-height: 1.04;
-  letter-spacing: -0.028em;
-  max-width: 12ch;
-  margin: 0;
+.hero-brand {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-wordmark {
+  display: block;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  margin: 0 0 14px;
 }
 
 .hero-statement {
   font-family: 'Fraunces', Georgia, serif;
-  font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
   line-height: 1.45;
   color: var(--text);
-  letter-spacing: -0.005em;
-  margin: 0 0 26px;
-  max-width: 44ch;
+  margin: 0;
+  max-width: 52ch;
+  font-weight: 400;
 }
 
-.hero-block .btn-group {
-  justify-content: flex-start;
+.hero-masthead .btn-group {
+  flex-shrink: 0;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
 /* ==== PAGE HEADER (non-home pages) ==== */
@@ -561,11 +572,11 @@ footer {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--accent);
   margin-bottom: 8px;
   display: block;
 }
-.footer-brand:hover { color: var(--accent); text-decoration: none; }
+.footer-brand:hover { color: var(--accent-hover); text-decoration: none; }
 
 .footer-tagline {
   font-size: 0.88rem;
@@ -575,9 +586,11 @@ footer {
 
 .footer-links {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: right;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: center;
+  margin-top: 18px;
 }
 .footer-links a {
   color: var(--text);
@@ -615,13 +628,16 @@ footer {
   .logo { font-size: 0.95rem; }
   .section { padding: 56px 0; }
   .section-tight { padding: 40px 0; }
-  .hero-home { padding: 44px 0 36px; }
-  .hero-block {
-    grid-template-columns: 1fr;
-    gap: 26px;
+  .hero-home { padding: 40px 0 32px; }
+  .hero-masthead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
   }
-  .hero-block h1 { max-width: 100%; }
-  .hero-block .btn-group { justify-content: flex-start; }
+  .hero-masthead .btn-group {
+    justify-content: flex-start;
+    width: 100%;
+  }
   .page-header { padding: 48px 0 32px; }
   .path-grid { grid-template-columns: 1fr; gap: 18px; }
   .path-card { padding: 30px 26px; }
@@ -636,7 +652,7 @@ footer {
   .project-description { max-width: 100%; }
   .release { padding: 28px 24px; }
   .email-box { padding: 26px 20px; }
-  .footer-inner { flex-direction: column; gap: 26px; }
-  .footer-links { text-align: left; }
+  .footer-inner { flex-direction: column; gap: 24px; align-items: flex-start; }
+  .footer-links { gap: 18px; }
   .footer-bottom { flex-direction: column; }
 }
